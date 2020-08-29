@@ -1,0 +1,14 @@
+{
+  "name": "supremebot",
+  "version": "2.0.0",
+  "description": "Preme Sniper",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Rohit Jethoe",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.3.0"
+  }
+}
