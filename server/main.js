@@ -35,8 +35,7 @@ const app = {
             await app.page.click(`a[data-style-name="${color}"]`);
         }
         await app.page.click('input[name="commit"]');
-        await app.page.waitFor(250);
-        await app.page.click('a.checkout');
+        await app.page.click('a.button.checkout', { delay: 50 });    
     }
 }
 
