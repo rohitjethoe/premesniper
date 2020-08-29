@@ -29,6 +29,14 @@ const app = {
     },
     launchPage: async () => {
         app.url !== '' ? await app.page.goto(app.url) : await app.page.goto('https://www.supremenewyork.com/shop');
+    },
+    addToCart: async (color) => {
+        if (color !== "" && color) {
+            await app.page.click(`a[data-style-name="${color}"]`);
+        }
+        await app.page.click('input[name="commit"]');
+        await app.page.waitFor(250);
+        await app.page.click('a.checkout');
     }
 }
 

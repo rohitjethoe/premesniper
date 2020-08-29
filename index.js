@@ -5,4 +5,5 @@ const app = require('./server/main');
     await app.openBrowser();
     await app.findItem('Tops/Sweaters', 'Static Sweater ');
     await app.launchPage();
+    await app.addToCart('Black');
 })()
