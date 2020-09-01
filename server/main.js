@@ -1,4 +1,4 @@
-const { firefox } = require('playwright');
+const puppeteer = require('puppeteer-firefox');
 const axios = require('axios');
 
 const app = {
@@ -6,7 +6,7 @@ const app = {
     page: null,
     url: '',
     openBrowser: async () => {
-        app.browser = await firefox.launch({
+        app.browser = await puppeteer.launch({
             headless: false
         });
         app.page = await app.browser.newPage();
@@ -34,10 +34,13 @@ const app = {
         if (color !== "" && color) {
             await app.page.click(`a[data-style-name="${color}"]`);
         }
+        await app.page.waitFor(100);
         await app.page.click('input[name="commit"]');
-        await app.page.click('a.button.checkout', { delay: 50 });    
+        await app.page.waitFor(100)
+        await app.page.click('a.checkout', { delay: 50 });    
     },
     fillFormData: async (params) => {
+        await app.page.waitFor('#order_billing_name');
         await app.page.type('#order_billing_name', params.name, { delay: Math.random * 10 });
         await app.page.type('#order_email', params.email, { delay: Math.random * 10 });
         await app.page.type('.order_tel input', params.phone, { delay: Math.random * 10 });
