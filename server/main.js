@@ -36,6 +36,15 @@ const app = {
         }
         await app.page.click('input[name="commit"]');
         await app.page.click('a.button.checkout', { delay: 50 });    
+    },
+    fillFormData: async (params) => {
+        await app.page.type('#order_billing_name', params.name, { delay: Math.random * 10 });
+        await app.page.type('#order_email', params.email, { delay: Math.random * 10 });
+        await app.page.type('.order_tel input', params.phone, { delay: Math.random * 10 });
+        await app.page.type('#bo', params.address, { delay: Math.random * 10 });
+        await app.page.type('#order_billing_city', params.city, { delay: Math.random * 10 });
+        await app.page.type('#order_billing_zip', params.zip, { delay: Math.random * 10 });
+        await app.page.select('#order_billing_country', params.country_code);
     }
 }
 
