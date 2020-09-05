@@ -20,20 +20,4 @@
 .header .logo img {
   width: 240px;
 }
-
-.header .nav {
-  float: right;
-  margin: 10px;
-}
-
-.header .nav .burger-icon:hover {
-  cursor: pointer;
-}
-
-.header .nav .burger-icon .bar {
-  width: 30px;
-  height: 4px;
-  background-color: #343434;
-  margin: 5px 0px;
-}
 /*# sourceMappingURL=App.css.map */
