@@ -17,9 +17,13 @@
   margin: 10px;
 }
 
+.header .nav .burger-icon:hover {
+  cursor: pointer;
+}
+
 .header .nav .burger-icon .bar {
   width: 30px;
-  height: 4.5px;
+  height: 4px;
   background-color: #343434;
   margin: 5px 0px;
 }
