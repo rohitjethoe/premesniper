@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Roboto:wght@400;500&display=swap');
 
 * {
     margin: 0;
@@ -14,5 +14,6 @@
     bottom: 0;
 }
 
+@import "./Announcement";
 @import "./Header";
 @import "./Main";
