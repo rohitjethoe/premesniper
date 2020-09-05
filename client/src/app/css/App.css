@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -96,5 +96,26 @@
 
 .settings .header .link-item-1:hover {
   border-bottom: 2px solid #C75645;
+}
+
+.premesniper-main .title {
+  font-family: 'Roboto', sans-serif;
+  color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 6%;
+  margin-top: 20px;
+  font-size: 32px;
+}
+
+.premesniper-main .title .dash {
+  margin-left: 20px;
+  width: 92px;
+  height: 2.4px;
+  background-color: #353535;
 }
 /*# sourceMappingURL=App.css.map */
