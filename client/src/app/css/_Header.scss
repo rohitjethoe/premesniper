@@ -1,6 +1,11 @@
 // Header Styling.
 .header {
     // Logo Styling.
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
     .logo {
         float: left;
         margin: 10px;
@@ -9,4 +14,71 @@
         }
     }
     // Nav Styling
+    .nav {
+        float: right;
+        display: flex;
+        align-items: center;
+        font-family: 'Courier Prime', monospace;
+        margin-top: 20px;
+        a {
+            margin: 0px 10px;
+            &:link, &:visited {
+                color: #353535;
+                font-size: 18px;
+                text-decoration: none;
+                margin-bottom: 2px;
+            }
+            &:hover {
+                margin-bottom: 0px;
+                border-bottom: 2px solid #353535;
+            }
+        }
+        .line {
+            height: 32px;
+            width: 2px;
+            background-color: #353535;
+        }
+    }
+}
+
+.main {
+    .premesniper-main {
+        display: block;
+    }
+    .premesniper-settings {
+        display: none;
+    }
+    .header {
+        .link-item-0 {
+            &:link, &:visited {
+                color: #C75645;
+                margin-bottom: 0px;
+                border-bottom: 2px solid #C75645;
+            }
+            &:hover {
+                border-bottom: 2px solid #C75645;
+            }
+        }
+    }
+}
+
+.settings {
+    .premesniper-main {
+        display: none;
+    }
+    .premesniper-settings {
+        display: block;
+    }
+    .header {
+        .link-item-1 {
+            &:link, &:visited {
+                color: #C75645;
+                margin-bottom: 0px;
+                border-bottom: 2px solid #C75645;
+            }
+            &:hover {
+                border-bottom: 2px solid #C75645;
+            }
+        }
+    }
 }
