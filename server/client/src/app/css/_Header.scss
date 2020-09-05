@@ -1,0 +1,24 @@
+// Header Styling.
+.header {
+    // Logo Styling.
+    .logo {
+        float: left;
+        margin: 10px;
+        img {
+            width: 240px;
+        }
+    }
+    // Nav Styling.
+    .nav {
+        float: right;
+        margin: 10px;
+        .burger-icon {
+            .bar {
+                width: 30px;
+                height: 4.5px;
+                background-color: #343434;
+                margin: 5px 0px;
+            }
+        }
+    }
+}
