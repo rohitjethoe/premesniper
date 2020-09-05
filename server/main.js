@@ -40,14 +40,30 @@ const app = {
         await app.page.click('a.checkout', { delay: 50 });    
     },
     fillFormData: async (params) => {
+        // Personal details.
         await app.page.waitFor('#order_billing_name');
         await app.page.type('#order_billing_name', params.name, { delay: Math.random * 10 });
         await app.page.type('#order_email', params.email, { delay: Math.random * 10 });
         await app.page.type('.order_tel input', params.phone, { delay: Math.random * 10 });
+        
+        // Address details.
         await app.page.type('#bo', params.address, { delay: Math.random * 10 });
         await app.page.type('#order_billing_city', params.city, { delay: Math.random * 10 });
         await app.page.type('#order_billing_zip', params.zip, { delay: Math.random * 10 });
         await app.page.select('#order_billing_country', params.country_code);
+        
+        // Creditcard data.
+        await app.page.select('#credit_card_type', params.card_type);
+        await app.page.type('#cnb', params.card_nr, { delay: Math.random * 10 });
+        await app.page.select('#credit_card_month', params.card_month);
+        await app.page.select('#credit_card_year', params.card_year);
+        await app.page.type('#vval', params.card_cvv, { delay: Math.random * 10 });
+        
+        // Accept terms & conditions.
+        await app.page.click('#order_terms', { delay: Math.random * 10 });
+    },
+    processOrder: async () => {
+        await app.page.click('input[name="commit"]');
     }
 }
 
